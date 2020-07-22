@@ -1,0 +1,1 @@
+{"dataDir": "data", "annotationDir": "Annotations", "questionDir": "Questions", "imageDir": "Images", "versionType": "v2_", "taskType": "OpenEnded", "dataType": "mscoco", "dataSubType": ["train2014", "val2014", "test2014"]}
