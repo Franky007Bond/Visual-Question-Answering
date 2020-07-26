@@ -1,3 +1,4 @@
+import os
 import json
 import plotly
 import pandas as pd
@@ -6,11 +7,25 @@ from flask import Flask
 from flask import render_template, request, jsonify, flash, redirect, url_for
 from plotly.graph_objs import Bar, Sunburst, Scatter
 from sqlalchemy import create_engine
+from static.models.VQA_model import build_VQA_model, predict_VQA_by_image_features
+import en_core_web_lg
+
+# ensure tensorflow proper gpu / memory management
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+config = ConfigProto()
+config.gpu_options.allow_growth = True
+session = InteractiveSession(config=config)
 
 app = Flask(__name__)
 app.secret_key = 'random string'
 
-# load data
+# define filepaths
+image_faetures_file_name = 'static/models/im_features_val.json'
+VQA_weights_file_name    = 'static/models/VQA_MODEL_WEIGHTS.hdf5'
+label_encoder_file_name  = 'static/models/label_encoder.csv'
+
+# load question & annotations data 
 engine = create_engine('sqlite:///../data/VQA_EDA.db')
 df_question_type        = pd.read_sql_table('tbl_question_type', engine)
 df_annotations_stats    = pd.read_sql_table('tbl_annotations_stats', engine)
@@ -20,6 +35,16 @@ df_qa_samples           = pd.read_sql_table('tbl_qa_samples', engine)
 
 question_type_list = df_qa_samples['question_type'].unique().tolist()
 question_type_list.sort()
+
+# load image features 
+im_features = json.load(open(image_faetures_file_name, 'r'))
+df_im_features = pd.DataFrame.from_dict(im_features)
+
+# build VQA model incl. label encoder
+vqa_model = build_VQA_model()
+vqa_model.load_weights(VQA_weights_file_name)
+word_embeddings = en_core_web_lg.load()
+label_encoder = pd.read_csv(label_encoder_file_name)
 
 
 # index webpage ilustrates VQA approach
@@ -32,8 +57,26 @@ def index():
 
 @app.route('/demo', methods = ['POST', 'GET'])
 def demo():
+    images = os.listdir('static/images/val')
 
-    return render_template('demo.html')
+    answers = []
+    current_image = images[0]
+    question = ""
+
+    if request.method == "POST":
+        # user has selected image and posted question
+        question        = request.form["question"]
+        current_image   = request.form['current-image-src']
+        current_image   = current_image.replace('http://localhost:3001/','')
+        current_image   = current_image.replace('static/images/val/','')
+        current_image   = current_image.replace('/','')
+
+        if question != "":
+            # predict answer
+            image_features = np.asarray(df_im_features[df_im_features['image']==current_image].iloc[0].features)
+            answers = predict_VQA_by_image_features(image_features, question, vqa_model, label_encoder, word_embeddings)
+
+    return render_template('demo.html', images=images, current_image=current_image, question=question, answers=answers)
 
 
 @app.route('/EDA', methods = ['POST', 'GET'])

@@ -1,0 +1,1001 @@
+label,token
+0,0
+1,1
+2,10
+3,10 feet
+4,100
+5,11
+6,12
+7,13
+8,14
+9,15
+10,150
+11,16
+12,17
+13,18
+14,19
+15,2
+16,2 feet
+17,20
+18,200
+19,2009
+20,2010
+21,2011
+22,2012
+23,2013
+24,21
+25,22
+26,23
+27,24
+28,25
+29,26
+30,27
+31,28
+32,3
+33,3 feet
+34,30
+35,32
+36,33
+37,35
+38,38
+39,4
+40,40
+41,45
+42,5
+43,50
+44,55
+45,6
+46,60
+47,7
+48,8
+49,9
+50,a
+51,above
+52,adidas
+53,adult
+54,africa
+55,african
+56,afternoon
+57,air
+58,airplane
+59,airport
+60,all
+61,american
+62,antique
+63,apartment
+64,apple
+65,apples
+66,apron
+67,army
+68,art
+69,asia
+70,asian
+71,asphalt
+72,at camera
+73,away
+74,b
+75,baby
+76,back
+77,background
+78,backpack
+79,backwards
+80,bacon
+81,bag
+82,bags
+83,bakery
+84,balance
+85,ball
+86,bamboo
+87,banana
+88,bananas
+89,bandana
+90,bar
+91,barbed wire
+92,barn
+93,baseball
+94,baseball bat
+95,baseball field
+96,basil
+97,basket
+98,basketball
+99,bat
+100,bathing
+101,bathroom
+102,batter
+103,batting
+104,beach
+105,beagle
+106,bear
+107,beard
+108,bears
+109,bed
+110,bedroom
+111,beef
+112,beer
+113,behind
+114,behind fence
+115,beige
+116,bell
+117,bench
+118,bicycle
+119,bicycles
+120,big
+121,big ben
+122,bike
+123,bikes
+124,bikini
+125,bird
+126,birds
+127,birthday
+128,black
+129,black and red
+130,black and white
+131,black and yellow
+132,blanket
+133,blender
+134,blinds
+135,blonde
+136,blue
+137,blue and green
+138,blue and white
+139,blue and yellow
+140,blurry
+141,bmw
+142,boat
+143,boats
+144,book
+145,books
+146,boots
+147,boston
+148,both
+149,bottle
+150,bottom
+151,bow
+152,bow tie
+153,bowl
+154,bowling
+155,box
+156,boxes
+157,boy
+158,bracelet
+159,branch
+160,bread
+161,breakfast
+162,brick
+163,bricks
+164,bridge
+165,british
+166,broccoli
+167,broken
+168,brown
+169,brown and white
+170,brush
+171,brushing teeth
+172,bucket
+173,building
+174,buildings
+175,bull
+176,bulldog
+177,bun
+178,bus
+179,bus stop
+180,butter
+181,butterfly
+182,c
+183,cake
+184,calico
+185,california
+186,calm
+187,camera
+188,camouflage
+189,canada
+190,candle
+191,candles
+192,candy
+193,car
+194,cardboard
+195,cargo
+196,carpet
+197,carriage
+198,carrot
+199,carrots
+200,cars
+201,cart
+202,cat
+203,catcher
+204,catching
+205,catching frisbee
+206,cats
+207,caution
+208,ceiling
+209,cell phone
+210,cell phones
+211,cement
+212,ceramic
+213,cereal
+214,chain
+215,chain link
+216,chair
+217,chandelier
+218,checkered
+219,cheese
+220,cheesecake
+221,chef
+222,cherry
+223,chicago
+224,chicken
+225,chihuahua
+226,child
+227,children
+228,china
+229,chinese
+230,chocolate
+231,chopsticks
+232,christmas
+233,church
+234,cigarette
+235,circle
+236,circles
+237,city
+238,clay
+239,clean
+240,cleaning
+241,clear
+242,cleats
+243,clock
+244,clock tower
+245,closed
+246,clothes
+247,clouds
+248,cloudy
+249,coca cola
+250,coffee
+251,coke
+252,cold
+253,colgate
+254,collar
+255,collie
+256,color
+257,commercial
+258,computer
+259,concrete
+260,cone
+261,cones
+262,cookies
+263,cooking
+264,corn
+265,couch
+266,counter
+267,cow
+268,cowboy
+269,cows
+270,crane
+271,cross
+272,cross country
+273,crosswalk
+274,cubs
+275,cumulus
+276,cup
+277,cutting
+278,cutting board
+279,cutting cake
+280,daisies
+281,daisy
+282,dalmatian
+283,dark
+284,day
+285,daytime
+286,decoration
+287,deer
+288,dell
+289,delta
+290,desert
+291,desk
+292,dessert
+293,diamond
+294,dining room
+295,dinner
+296,dirt
+297,dirty
+298,do not enter
+299,dock
+300,dodgers
+301,dog
+302,dogs
+303,donut
+304,donuts
+305,door
+306,double decker
+307,down
+308,downhill
+309,dress
+310,drinking
+311,driving
+312,dry
+313,duck
+314,ducks
+315,dunkin donuts
+316,dusk
+317,eagle
+318,east
+319,eating
+320,egg
+321,eggs
+322,electric
+323,electricity
+324,elephant
+325,elephants
+326,empty
+327,england
+328,english
+329,europe
+330,evening
+331,face
+332,fake
+333,fall
+334,fan
+335,farm
+336,fast
+337,fedex
+338,fedora
+339,female
+340,fence
+341,field
+342,finch
+343,fire
+344,fire hydrant
+345,fire truck
+346,fireplace
+347,fish
+348,fishing
+349,flag
+350,flip flops
+351,flip phone
+352,floor
+353,floral
+354,flower
+355,flowers
+356,flying
+357,flying kite
+358,flying kites
+359,foil
+360,food
+361,football
+362,ford
+363,foreground
+364,forest
+365,fork
+366,fork and knife
+367,forward
+368,france
+369,french
+370,french fries
+371,fridge
+372,fries
+373,frisbee
+374,front
+375,fruit
+376,full
+377,game
+378,garage
+379,garbage
+380,gas
+381,german
+382,german shepherd
+383,germany
+384,giants
+385,giraffe
+386,giraffes
+387,girl
+388,glass
+389,glasses
+390,glazed
+391,glove
+392,gloves
+393,go
+394,goat
+395,goggles
+396,gold
+397,golden retriever
+398,good
+399,gothic
+400,graffiti
+401,granite
+402,grapes
+403,grass
+404,gray
+405,gray and white
+406,grazing
+407,green
+408,green and white
+409,green and yellow
+410,grill
+411,ground
+412,guitar
+413,hair
+414,hair dryer
+415,half
+416,halloween
+417,ham
+418,hand
+419,handle
+420,happy
+421,harley
+422,harley davidson
+423,harness
+424,hat
+425,hats
+426,hay
+427,head
+428,headband
+429,headphones
+430,heart
+431,hello kitty
+432,helmet
+433,helmets
+434,high
+435,hit ball
+436,home
+437,honda
+438,horns
+439,horse
+440,horses
+441,hospital
+442,hot
+443,hot dog
+444,hot dogs
+445,hotel
+446,house
+447,hungry
+448,hydrant
+449,i don't know
+450,ice
+451,ice cream
+452,in air
+453,in bowl
+454,in field
+455,in water
+456,india
+457,indian
+458,indoors
+459,inside
+460,italian
+461,italy
+462,jacket
+463,japan
+464,japanese
+465,jeans
+466,jet
+467,jump
+468,jumping
+469,ketchup
+470,keyboard
+471,kia
+472,kids
+473,kitchen
+474,kite
+475,kite flying
+476,kites
+477,knife
+478,krispy kreme
+479,lab
+480,ladder
+481,lake
+482,lamp
+483,landing
+484,lanyard
+485,laptop
+486,laptops
+487,large
+488,laying
+489,laying down
+490,leash
+491,leather
+492,leaves
+493,left
+494,lemon
+495,lettuce
+496,library
+497,light
+498,lighthouse
+499,lights
+500,lion
+501,little
+502,living room
+503,log
+504,london
+505,long
+506,lot
+507,lots
+508,low
+509,luggage
+510,lunch
+511,magnets
+512,male
+513,man
+514,man on right
+515,many
+516,map
+517,marble
+518,market
+519,mask
+520,mcdonald's
+521,meat
+522,medium
+523,men
+524,mercedes
+525,metal
+526,microphone
+527,microwave
+528,middle
+529,military
+530,milk
+531,mirror
+532,modern
+533,monkey
+534,morning
+535,motorcycle
+536,motorcycles
+537,mountain
+538,mountains
+539,mouse
+540,moving
+541,mozzarella
+542,multi
+543,museum
+544,mushrooms
+545,mustard
+546,napkin
+547,navy
+548,necklace
+549,net
+550,new york
+551,newspaper
+552,night
+553,nighttime
+554,nike
+555,no
+556,no one
+557,no parking
+558,nokia
+559,none
+560,noon
+561,north
+562,nothing
+563,nowhere
+564,oak
+565,obama
+566,ocean
+567,octagon
+568,off
+569,office
+570,old
+571,olives
+572,on
+573,on bed
+574,on building
+575,on counter
+576,on desk
+577,on floor
+578,on grass
+579,on ground
+580,on left
+581,on plate
+582,on right
+583,on sidewalk
+584,on street
+585,on table
+586,on tower
+587,on tracks
+588,on wall
+589,one on left
+590,one on right
+591,one way
+592,onions
+593,open
+594,orange
+595,orange and white
+596,orange juice
+597,oranges
+598,out
+599,outdoor
+600,outdoors
+601,outside
+602,oval
+603,oven
+604,overcast
+605,owl
+606,owner
+607,p
+608,paddle
+609,paint
+610,painting
+611,palm
+612,pan
+613,panda
+614,paper
+615,parade
+616,parasailing
+617,park
+618,parked
+619,parking
+620,parking lot
+621,parking meter
+622,parrot
+623,parsley
+624,party
+625,passenger
+626,pasta
+627,peace
+628,pelican
+629,pen
+630,people
+631,pepper
+632,pepperoni
+633,peppers
+634,pepsi
+635,person
+636,phone
+637,phones
+638,photographer
+639,piano
+640,pickle
+641,pickles
+642,picture
+643,pictures
+644,pig
+645,pigeon
+646,pigeons
+647,pillow
+648,pillows
+649,pine
+650,pineapple
+651,pink
+652,pink and white
+653,pitcher
+654,pitching
+655,pizza
+656,pizza cutter
+657,plaid
+658,plane
+659,plant
+660,plants
+661,plastic
+662,plate
+663,playing
+664,playing baseball
+665,playing frisbee
+666,playing game
+667,playing tennis
+668,playing wii
+669,polar
+670,polar bear
+671,pole
+672,poles
+673,police
+674,polka dot
+675,polo
+676,ponytail
+677,poodle
+678,pork
+679,posing
+680,pot
+681,potatoes
+682,pots
+683,power lines
+684,protection
+685,public
+686,pug
+687,purple
+688,purse
+689,racing
+690,racket
+691,rail
+692,railing
+693,rain
+694,rainbow
+695,raining
+696,rainy
+697,ramp
+698,reading
+699,real
+700,rectangle
+701,red
+702,red and black
+703,red and blue
+704,red and green
+705,red and white
+706,red and yellow
+707,red sox
+708,red white and blue
+709,reflection
+710,refrigerator
+711,remote
+712,restaurant
+713,resting
+714,rice
+715,riding
+716,right
+717,ring
+718,river
+719,road
+720,rock
+721,rocks
+722,roman
+723,roman numerals
+724,rope
+725,rose
+726,roses
+727,round
+728,rug
+729,running
+730,runway
+731,rural
+732,sad
+733,safety
+734,sailboat
+735,salad
+736,samsung
+737,sand
+738,sandals
+739,sandwich
+740,sandwiches
+741,santa
+742,sauce
+743,sausage
+744,scarf
+745,school
+746,scissors
+747,scooter
+748,seagull
+749,seagulls
+750,selfie
+751,serve
+752,serving
+753,shade
+754,shadow
+755,shadows
+756,shallow
+757,sheep
+758,shelf
+759,shirt
+760,shoe
+761,shoes
+762,short
+763,shorts
+764,shower
+765,shrimp
+766,siamese
+767,sidewalk
+768,sign
+769,silver
+770,sink
+771,sitting
+772,skate park
+773,skateboard
+774,skateboarder
+775,skateboarding
+776,skateboards
+777,ski
+778,ski lift
+779,ski poles
+780,skier
+781,skiing
+782,skis
+783,skull
+784,sky
+785,sleeping
+786,slow
+787,small
+788,smile
+789,smiling
+790,smoke
+791,smoothie
+792,sneakers
+793,snow
+794,snowboard
+795,snowboarding
+796,snowy
+797,soap
+798,soccer
+799,soccer ball
+800,soda
+801,sony
+802,soup
+803,south
+804,spanish
+805,sparrow
+806,spinach
+807,spoon
+808,spring
+809,sprinkles
+810,square
+811,squares
+812,stainless steel
+813,stairs
+814,standing
+815,star
+816,starbucks
+817,stars
+818,station
+819,statue
+820,steak
+821,steam
+822,steel
+823,stick
+824,stone
+825,stop
+826,stop sign
+827,store
+828,stove
+829,straight
+830,straw
+831,strawberries
+832,strawberry
+833,street
+834,striped
+835,stripes
+836,stuffed animal
+837,stuffed animals
+838,subway
+839,sugar
+840,suit
+841,suitcase
+842,suitcases
+843,summer
+844,sun
+845,sunglasses
+846,sunlight
+847,sunny
+848,sunset
+849,surf
+850,surfboard
+851,surfboards
+852,surfer
+853,surfing
+854,suv
+855,swan
+856,sweater
+857,swimming
+858,swinging
+859,t
+860,tabby
+861,table
+862,tag
+863,tail
+864,taking off
+865,taking picture
+866,talking
+867,talking on phone
+868,tall
+869,tan
+870,tank top
+871,tattoo
+872,taxi
+873,tea
+874,teddy bear
+875,teddy bears
+876,tennis
+877,tennis ball
+878,tennis court
+879,tennis racket
+880,tennis rackets
+881,terrier
+882,texting
+883,tie
+884,tiger
+885,tile
+886,toaster oven
+887,toilet
+888,toilet paper
+889,tomato
+890,tomatoes
+891,toothbrush
+892,toothbrushes
+893,top
+894,towel
+895,towels
+896,tower
+897,toy
+898,toyota
+899,tracks
+900,traffic
+901,traffic light
+902,train
+903,train station
+904,transportation
+905,trash
+906,trash can
+907,traveling
+908,tray
+909,tree
+910,trees
+911,triangle
+912,truck
+913,trunk
+914,tulips
+915,turkey
+916,tv
+917,twin
+918,typing
+919,umbrella
+920,umbrellas
+921,umpire
+922,united
+923,united states
+924,unknown
+925,up
+926,uphill
+927,urban
+928,usa
+929,van
+930,vanilla
+931,vase
+932,vases
+933,vegetable
+934,vegetables
+935,vertical
+936,very
+937,very tall
+938,vest
+939,visor
+940,w
+941,waiting
+942,walking
+943,wall
+944,warm
+945,washington
+946,watch
+947,watching
+948,watching tv
+949,water
+950,water bottle
+951,water skiing
+952,watermelon
+953,wave
+954,waves
+955,wedding
+956,west
+957,wet
+958,wetsuit
+959,wheat
+960,white
+961,white and black
+962,white and blue
+963,white and brown
+964,white and red
+965,wicker
+966,wii
+967,wii controller
+968,wii remote
+969,wild
+970,wilson
+971,wind
+972,window
+973,windows
+974,wine
+975,wine glass
+976,winter
+977,wire
+978,wires
+979,woman
+980,women
+981,wood
+982,wooden
+983,woods
+984,wool
+985,work
+986,working
+987,wristband
+988,x
+989,yamaha
+990,yellow
+991,yellow and black
+992,yellow and blue
+993,yellow and red
+994,yellow and white
+995,yes
+996,young
+997,zebra
+998,zebras
+999,zoo

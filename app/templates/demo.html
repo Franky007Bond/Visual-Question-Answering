@@ -4,7 +4,68 @@
 
 
 {% block content %}
+<div class="page-header">
+	<h1 class="text-center">Try VQA out yourself</h1>
+</div>
+ <p></p>
 
-<h1>VQA Demo placeholder</h1>
+<div class='row'>
+	<div class ='col-md-6'>
+		<h3>1. Choose an image</h3>
+        <p>Remark: The algorithm hasn't been trained on any of the images below</p>
+		<section class="container" id="content">
+			<div class="image-container img-responsive" >
+				<img class="main-img" style="width:100%" src="{{ url_for('static', filename='images/val/'+current_image) }}" id="current" alt="Upload some images in the gallery">
+			</div>
+			<p></p>
+			<div class="imgs">
+			    {% for image in images %}
+			        <img class="imgs" src="{{ url_for('static', filename='images/val/'+image) }}" />
+			    {% endfor %}
+			</div>
+        </section>		
+    </div>
+    <div class='col-md-6'>
+    	<h3>2. Pose a question related to the image and hit enter ↵</h3>
+    	<p>The question could concern: 
+    		<ul>
+    			<li>the type or color of an items</li>
+    			<li>the number of persons or items</li>
+    			<li>the activity that' shown on the picture </li>
+    			<li>closed (yes/	no) questions</li>
+    			<li>and many more ... &#128521</li>
+			</ul>
+		</p>
+    	<form class="form-inline" method="POST" action="{{ url_for('demo') }}">
+    	<div class="form-group" style="width:100%">
+    		 <div class="input-group" style="width:100%">
+                {% if question=="" %}
+                    <input type="text" name="question" id="question" class="form-control" 
+                    placeholder="Please enter your question here" aria-label="question" aria-describedby="basic-addon1">
+                {% else %}
+                    <input type="text" name="question" id="question" class="form-control" 
+                    value="{{question}}" aria-label="question" aria-describedby="basic-addon1">
+                {% endif %}
+    		 	<input type="hidden" name = "current-image-src" id="current-image-src" value="{{ url_for('static',filename='images/val/'+current_image)}}">  
+    		 </div>
+    	 </div>
+    	</form>
+        <p></p>
+        {% if answers|length > 0 %}
+            <div id='predicted-answers'>
+                <p>Most likely answers are:</p>
+                <table>
+                    {% for ans in answers%}
+                        <tr>
+                            <td style="font-size: {{textsize}}px">{{ans.answer}}</td>
+                            <td>{{ans.probability}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endif %}
+
+  	</div>
+</div>
 
 {% endblock %}
