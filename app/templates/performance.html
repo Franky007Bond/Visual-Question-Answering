@@ -3,6 +3,45 @@
 
 {% block content %}
 
-<h1>VQA performance placeholder</h1>
+<div class="page-header">
+	<h1 class="text-center">Model performance</h1>
+</div>
+<p></p>
+<div class='row'>
+	<div class='col-md-12'>
+		<h3>Evaluation criteria</h3>
+		<p> To respect the specifics of the data set (e.g. image-question pairs are not labelled by a single class but by the answers provided by 10 workers) following accuracy definition has been developed that is also applied in the VQA challenges:</p>
+		<blockquote class="blockquote" style="font-size: 16px; font-style: italic"> 
+			<p>"For the open-ended task, the generated answers are evaluated using the following accuracy metric:</p>
+ 			<p> $$ {accuracy = min(\frac{nr \;of \;humans \;that \;provided \;that \;answer}{3} , 1)} $$</p>
+ 			<p> i.e., an answer is deemed 100% accurate if at least 3 [out of the 10 - Author's note] workers provided that exact answer. Before comparison, all responses are made lowercase, numbers converted to digits, and punctuation & articles removed. We avoid using soft metrics such as Word2Vec, since they often group together words that we wish to distinguish, such as “left” and “right”. We also avoid using evaluation metrics from machine translation such as BLEU and ROUGE because such metrics are typically applicable and reliable for sentences containing multiple words. In VQA, most answers (89.32%) are single word; thus there no high-order n-gram matches between predicted answers and ground-truth answers, and low-order n-gram matches degenerate to exact-string matching. Moreover, these automatic metrics such as BLEU and ROUGE have been found to poorly correlate with human judgement for tasks such as image caption evaluation."</p>
+ 			<footer class="blockquote-footer">
+ 				Source: <cite title="Source Title"><a href="https://arxiv.org/pdf/1505.00468.pdf">VQA: Visual Question Answering</a></cite>
+ 			</footer>
+ 		</blockquote>
+	</div>
+</div>
+<hr>
+<h3 class="text-center">Evaluation results</h3>
+
+{% for dataset in ['Training set', 'Validation set'] %}
+	<h5>{{dataset}}</h5>
+	<p>Overall accuracy: &nbsp <span class="badge badge-secondary">{{accuracy_overall[loop.index0]['overall_accuracy']}}%</span></h5></p>
+
+	<div class="row">
+		<div class='col-md-9'>
+			<div class="container" style="width=100%">
+				<div id="{{ids[2*loop.index0+0]}}"></div>
+			</div>  
+		</div>
+		<div class='col-md-3'>
+			<div class="container" style="width=100%">				
+				<div id="{{ids[2*loop.index0+1]}}"></div>
+			</div>  
+		</div>
+	</div>
+
+	<hr>
+{% endfor %}
 
 {% endblock %}

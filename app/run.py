@@ -46,6 +46,28 @@ vqa_model.load_weights(VQA_weights_file_name)
 word_embeddings = en_core_web_lg.load()
 label_encoder = pd.read_csv(label_encoder_file_name)
 
+# load evalutaion results both for training and validation set
+dataSubType = ['train2014', 'val2014']
+accuracy_overall = []
+df_accuracy_perQuestionType = pd.DataFrame()
+df_accuracy_perAnswerType = pd.DataFrame()
+
+for subType in dataSubType:
+    accuracy = json.load(open('static/models/v2_OpenEnded_mscoco_%s_final_accuracy.json'%(subType), 'r'))
+    acc_overall = accuracy['overall']
+    acc_perQuestionType = accuracy['perQuestionType']
+    acc_perAnswerType = accuracy['perAnswerType']
+    df_acc_perQuestionType = pd.DataFrame.from_dict(acc_perQuestionType, orient='index').reset_index()
+    df_acc_perQuestionType.rename(columns = {'index':'Question Type', 0: 'Accuracy'}, inplace=True)
+    df_acc_perAnswerType = pd.DataFrame.from_dict(acc_perAnswerType, orient='index').reset_index()
+    df_acc_perAnswerType.rename(columns = {'index':'Answer Type', 0: 'Accuracy'}, inplace=True)
+    df_acc_perQuestionType['dataSubType'] = subType
+    df_acc_perAnswerType['dataSubType'] = subType
+    
+    accuracy_overall.append({'dataSubType':subType, 'overall_accuracy':acc_overall})
+    df_accuracy_perQuestionType =  df_accuracy_perQuestionType.append(df_acc_perQuestionType)
+    df_accuracy_perAnswerType =  df_accuracy_perAnswerType.append(df_acc_perAnswerType)
+
 
 # index webpage ilustrates VQA approach
 @app.route('/')
@@ -193,8 +215,56 @@ def EDA():
 
 @app.route('/performance')
 def performance():
+    graphs = []
 
-    return render_template('performance.html')
+    # create charts both for training and validation set
+    for subType in dataSubType:
+        graphs.append(
+            {
+                'data': [
+                    Bar(
+                       x=df_accuracy_perQuestionType.query('dataSubType == "%s"'%(subType))['Question Type'],
+                       y=df_accuracy_perQuestionType.query('dataSubType == "%s"'%(subType))['Accuracy'],              
+                    )
+                ],
+                'layout': {
+                    'title': 'Accuracy per Question Type',
+                    'yaxis': {
+                        'title': "Accuracy [%]", 
+                    },
+                    'xaxis': {
+                        'title': "Question Type",
+                        'tickfont': {'size':8},
+                        'tickangle':45
+                    },
+                }
+            })
+        graphs.append({
+               'data': [
+                    Bar(
+                       x=df_accuracy_perAnswerType.query('dataSubType == "%s"'%(subType))['Answer Type'],
+                       y=df_accuracy_perAnswerType.query('dataSubType == "%s"'%(subType))['Accuracy'],              
+                    )
+                ],
+                'layout': {
+                    'title': 'Accuracy per Answer Type',
+                    'yaxis': {
+                        'title': "Accuracy [%]", 
+                    },
+                    'xaxis': {
+                        'title': "Answer Type",
+                        'tickangle':45
+                    },
+                }
+            }
+            )
+
+    # encode plotly graphs in JSON
+    ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
+    graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
+    
+    # render web page with plotly graphs
+    return render_template('performance.html', ids=ids, graphJSON=graphJSON, accuracy_overall=accuracy_overall)
 
 
 def main():
