@@ -15,6 +15,8 @@ This project has been carried out as the Capstone project of my [udacity](https:
 
 Visual Question Answering (VQA) is a fascinating research field at the intersection of computer vision and language understanding. The objective is to solve the following tasks: Given an image and a natural language question about the image, the VQA model needs to provide an accurate natural language answer.
 
+An article going in more detail can be found here on [Medium](https://medium.com/@frank.merwerth/a-visual-turing-test-for-modern-ai-systems-de7530416e57)
+
 ## Running the web app<a name="web_app"></a>
 The repository contains all necessary data to run the web app demontrator without training. 
 The web app is programmed in Python 3 and requires the following libraries:
